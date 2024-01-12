@@ -1,0 +1,18 @@
+.details-container{
+  margin-left: 45px;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  background-color: #ECEBF3;
+  text-decoration: none;
+  color: #6D7275;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: #6D7275;
+  color: #ECEBF3;
+}
+

@@ -1,0 +1,11 @@
+<ul class="sideEffect">
+    <h3>Nuspojave</h3>
+    <li *ngFor="let sideEffect of sideEffects">
+        <hr>
+        <p><b>Kratki opis:</b> {{sideEffect.kratkiOpis}} %</p>
+        <p><b>Dugi opis:</b> {{sideEffect.dugiOpis}} %</p>
+        <p><b>Učestalost pojave:</b> {{sideEffect.ucestalost}} %</p>
+        <hr>
+    </li>
+</ul>
+

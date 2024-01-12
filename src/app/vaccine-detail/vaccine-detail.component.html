@@ -1,0 +1,7 @@
+<div class="details-container" *ngIf="vaccine">
+  <h2>Detalji o cjepivu {{vaccine.manufacturerCompany}}</h2>
+  <div><span>Proizvođač: </span>{{vaccine.manufacturerCompany}}</div>
+  <div><span>Broja doza koje pacijent treba primiti: </span>{{vaccine.dosage}}</div>
+  <app-side-effect [selectedVaccine] = "vaccine"></app-side-effect>
+  <button routerLink="/vaccines">Natrag</button>
+</div>

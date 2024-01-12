@@ -1,0 +1,83 @@
+*{
+  font-family: Arial;
+  margin-left: 45px;
+}
+
+li{
+  position: relative;
+  padding: 10px;
+  list-style-type: none;
+  margin-left: 0;
+  background-color: #ECEBF3;
+  width: 350px;
+  padding-left: 0px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.row,
+.row-manufacturer{
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.row{
+  background-color: #292929;
+  color: white;
+}
+
+.row-manufacturer{
+  margin-left: 10px;
+}
+
+span{
+  margin-left: -40px;
+  color: #C20114;
+}
+
+li:hover{
+  background-color: #6D7275;
+  color: #ECEBF3;
+}
+
+button.delete{
+  position: absolute;
+  margin: 0;
+  right: 5px;
+  top: 20px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #ECEBF3;
+  text-decoration: none;
+  color: #6D7275;
+  border-radius: 5px;
+}
+
+button.delete:hover{
+  background-color: #C20114;
+  color: white;
+}
+
+div.unosCjepiva,
+label,
+input,
+select{
+  margin: 0;
+}
+
+.addBtn{
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  background-color: #ECEBF3;
+  text-decoration: none;
+  color: #6D7275;
+  border-radius: 5px;
+}
+
+.addBtn:hover{
+  background-color: #6D7275;
+  color: #ECEBF3;
+}

@@ -1,0 +1,61 @@
+<h2>Cjepiva</h2>
+<ul class="vaccines">
+  <li *ngFor="let vaccine of vaccines"
+      (click)="onSelect(vaccine)"
+      [class.selected]="vaccine === selectedVaccine"
+      [routerLink]="['/vaccine-detail', vaccine.researchVaccineName]">
+      <div class="row">
+        {{vaccine.researchVaccineName}}
+      </div>
+      <span class="badge"><fa-icon [icon]="icon"></fa-icon></span>
+      <div class="row-manufacturer">
+        {{vaccine.manufacturerCompany}}
+      </div>
+      <button class="delete" id="deleteButton"
+      (click)="deleteVaccine(vaccine)">X</button>
+  </li>
+</ul>
+
+<div class="unosCjepiva">
+  <h3>Unesi novo cjepivo</h3>
+  <div>
+    <label >Istraživački naziv:
+      <div>
+        <input type="text" #inputResearchVaccineName>
+      </div>
+    </label>
+  </div>
+  <div>
+    <label >Naziv proizvođača:
+      <div>
+        <input type="text" #inputManufacturerName>
+      </div>
+    </label>
+  </div>
+  <div>
+    <label for="tipCjepiva">Tip cjepiva:
+      <div>
+        <select id="tipCjepiva" #inputVaccineType>
+          <option value="RNA">RNA</option>
+          <option value="VIRALNI_VEKTOR">VIRALNI_VEKTOR</option>
+        </select>
+      </div>
+    </label>
+  </div>
+  <div>
+    <label for="brojDoza">Broj doza potrebnih za cijepljenje:
+      <div>
+        <input #dosage />
+      </div>
+    </label>
+  </div>
+  <div>
+    <label for="skladisteDoza">Broj dostupnih doza:
+      <div>
+        <input #quantityInStorage />
+      </div>
+    </label>
+  </div>
+ <button class="addBtn" (click) ="addVaccine(inputManufacturerName.value, dosage.value, inputResearchVaccineName.value, quantityInStorage.value ,inputVaccineType.value); inputManufacturerName.value = ''; dosage.value= ''; inputResearchVaccineName.value= ''; quantityInStorage.value= '';">Dodaj cjepivo</button>
+</div>
+<router-outlet></router-outlet>
